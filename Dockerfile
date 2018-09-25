@@ -7,7 +7,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     rm -rf /var/lib/apt/lists/* && \
     git clone https://github.com/tensorflow/benchmarks /benchmarks && \
     cd /benchmarks && \
-    git checkout 1ef603fd7e568ff75127ec07f160808fcc59911c
+    git checkout 1ef603fd7e568ff75127ec07f160808fcc59911c && \
+    rm -rf .git
 
 COPY benchmark.sh /
 
